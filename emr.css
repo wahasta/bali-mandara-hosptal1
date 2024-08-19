@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgba(228, 228, 228, 0.222);
+    color: rgb(15, 15, 15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    gap: 20px;
+    padding: 0 4rem;
+    text-decoration: none;
+}
+
+nav>ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.navbar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    background-color: #00446f;
+}
+
+.navbar-items {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #f7f7f7;
+    /* Warna link */
+}
+
+.navbar-items>li>a {
+    text-decoration: none;
+    color: #e4dfdf;
+}
+
+.container-img {
+    position: relative;
+    height: calc(100vh - 150px);
+    width: 100%;
+}
+
+.main-img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.blur-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.564);
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-text {
+    color: #eef0f0;
+    font-size: 70px
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+}
+
+.float-button {
+    position: fixed;
+    z-index: 500;
+    bottom: 20px;
+    right: 20px;
+}
+
+.features-container {
+    display: flex;
+    flex-direction: column;
+    /* Mengatur elemen berderet secara vertikal */
+    align-items: flex-start;
+    /* Menempatkan elemen di sisi kiri */
+    gap: 20px;
+    /* Jarak antar elemen */
+    padding: 20px;
+    background-color: #f49;
+    /* Warna latar belakang */
+    max-width: 300px;
+    /* Batas lebar agar tetap di sisi kiri */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    padding: 2rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-container {
+    background-color: rgba(1, 1, 1, 0.7);
+    border-radius: 5px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    margin-top: 0;
+}
+
+.form-container label {
+    display: block;
+    margin: 0.5rem 0 0.2rem;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.form-container button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    height: 3%;
+    bottom: 0;
+}
+
+.container-img {
+    position: relative;
+    height: calc(100vh - 150px);
+    width: 100%;
+}
+
+.main-img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.blur-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.564);
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header,
+.input-section,
+.patient-records {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.record {
+    background-color: #ffffff;
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.how-we-can-help {
+    text-align: center;
+    padding: 4
+}

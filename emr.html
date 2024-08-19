@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMR System</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./emr.css">
+    <style>
+        .body-container {
+            display: flex;
+            flex-direction: column;
+            padding: 50px 0px;
+        }
+    </style>
+</head>
+
+<body class="body-container">
+
+    <head>
+        <img src="./logo.png" class="logo" />
+        <nav class="navbar-container">
+            <h1>Bali Mandara Hospital</h1>
+            <ul class="navbar-items">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./telemidicine.html">Telemedicine</a></li>
+                <li><a href="emr.html">EMR System</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li style="color: black;">
+                    <div id="map">Map</div>
+                </li>
+            </ul>
+
+        </nav>
+
+    </head>
+    <div class="container">
+        <header>
+            <h1 id="display-name">Welcome to the EMR System</h1>
+        </header>
+
+        <section class="input-section">
+            <form id="patient-form">
+                <div class="form-group">
+                    <label for="patient-name">Enter Patient Name:</label>
+                    <input type="text" id="patient-name" name="patient-name" placeholder="Enter name here" required>
+                </div>
+                <div class="form-group">
+                    <label for="patient-disease">Enter Patient Condition:</label>
+                    <input type="text" id="patient-disease" name="patient-disease" placeholder="Enter condition here" required>
+                </div>
+                <div class="form-group">
+                    <label for="patient-blood">Enter Blood Type:</label>
+                    <input type="text" id="patient-blood" name="patient-blood" placeholder="Enter blood type here" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section class="patient-records">
+            <h2>Patient Records</h2>
+            <div id="record-list">
+                <!-- Daata pasien masuk sini -->
+            </div>
+        </section>
+    </div>
+
+    <section class="how-we-can-help">
+        <h2>How We Can Help</h2>
+        <p>If you still feel sick, don't hesitate to come to Bali Mandara Hospital</p>
+
+        <div class="float-button">
+            <a href="https://wa.me/+62 821-4616-7341" target="_blank"></a>
+            <img src="./whatasap.png" alt="Need to Help" width="80px">
+            <h3>Nead to help</h3>
+        </div>
+    </section>
+
+    <script>
+        const map = document.getElementById("map");
+
+        map.addEventListener('click', (e) => {
+            window.open("https://www.google.co.id/maps/place/RS+Bali+Mandara/@-8.7202273,115.224485,14z/data=!4m10!1m2!2m1!1sbali+mandara!3m6!1s0x2dd241bcaf4b1535:0x1846b970c9523919!8m2!3d-8.7035694!4d115.2487979!15sCgxiYWxpIG1hbmRhcmGSARBnZW5lcmFsX2hvc3BpdGFs4AEA!16s%2Fg%2F11cjh_ny5n?hl=en&entry=ttu",
+                "_blank").focus()
+        })
+        $(document).ready(function() {
+            $('#patient-form').submit(function(event) {
+                event.preventDefault(); // Mencegah form dari reload halaman
+
+                // Mengambil nilai dari input
+                var patientName = $('#patient-name').val();
+                var patientDisease = $('#patient-disease').val();
+                var patientBlood = $('#patient-blood').val();
+
+                // Menampilkan nama pasien di header
+                $('#display-name').text("Welcome, " + patientName + " to the EMR System!");
+
+                // Membuat elemen baru untuk menampilkan data pasien
+                var record = `
+                <div class="record">
+                    <p><strong>Name:</strong> ${patientName}</p>
+                    <p><strong>Condition:</strong> ${patientDisease}</p>
+                    <p><strong>Blood Type:</strong> ${patientBlood}</p>
+                </div>
+            `;
+
+                // Menambahkan data pasien ke daftar
+                $('#record-list').append(record);
+
+                // Mengosongkan input setelah submit
+                $('#patient-name').val('');
+                $('#patient-disease').val('');
+                $('#patient-blood').val('');
+            });
+        });
+    </script>
+</body>
+
+</html>

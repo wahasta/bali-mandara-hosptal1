@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan Telemedicine</title>
+    <link rel="stylesheet" href="./telemeicine.css">
+    <style>
+        .container-navbar {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .navbar-items {
+            display: flex;
+            gap: 50px;
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="container-navbar">
+        <ul class="navbar-items">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./telemidicine.html">Telemedicine</a></li>
+            <li><a href="emr.html">EMR System</a></li>
+            <li><a href="booking.html">Booking</a></li>
+        </ul>
+    </header>
+
+
+    <div class="container">
+        <section class="hero">
+            <img src="./telemedicine.png" alt="Telemedicine Illustration">
+        </section>
+
+        <section class="description">
+            <h2>Tentang Layanan Kami</h2>
+            <p>Kami menyediakan layanan konsultasi dokter online melalui video call, chat, dan telepon. Dapatkan diagnosa dan resep langsung dari dokter berlisensi tanpa harus meninggalkan rumah.</p>
+        </section>
+
+        <section class="contact-form">
+            <h2>Formulir Konsultasi</h2>
+            <form action="/submit" method="post">
+                <input type="text" name="name" placeholder="Nama Lengkap" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="phone" placeholder="Nomor Telepon" required>
+                <textarea name="message" placeholder="Deskripsikan keluhan Anda" rows="5" required></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+        </section>
+
+        <section class="whatsapp-link">
+            <h2>Atau Mulai Konsultasi via WhatsApp</h2>
+            <a href="https://wa.me/+62 821-4563-1470" target="_blank">
+            Chat via WhatsApp
+        </a>
+        </section>
+    </div>
+
+</body>
+
+</html>
